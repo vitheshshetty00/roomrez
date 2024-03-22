@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Name
 
-## Getting Started
+# Project Name
 
-First, run the development server:
+This project is a room booking system built with Next.js 14 and Firebase. It allows users to view available rooms, book a room for a specific date and time, and view their bookings. The system checks for booking conflicts to prevent double-booking of rooms. Firebase is used for authentication, allowing users to sign in to book rooms and view their bookings, and for storage, storing the room and booking data. The project uses a modern, responsive design to provide a great user experience on both desktop and mobile devices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Application Pages
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application consists of several pages, each serving a specific purpose:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Login Page**: This page allows users to log in to the application using their email and password. Once logged in, users can book rooms and view their bookings.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Register Page**: This page allows new users to register for the application. Users need to provide their email and password to create a new account.
 
-## Learn More
+- **Admin Page**: This page provides a user interface for administrators to manage rooms. Administrators can add new rooms, edit existing rooms, and remove rooms.
 
-To learn more about Next.js, take a look at the following resources:
+- **Home Page**: This is the main page of the application. It displays a list of available rooms. Users can select a room, choose a date and time, and book the room. The system checks for booking conflicts to prevent double-booking of rooms. Users can also view their bookings on this page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ 
+## Accessing the Admin Page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Currently, the admin page can be accessed using the following credentials:
 
-## Deploy on Vercel
+- Email: vitheshshettyxx@gmail.com
+- Password: 12345678
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+In the future, we plan to implement a more secure system with user roles, where only users with the "admin" role will be able to access the admin page. For the time being, it is done this way for simplicity and ease of testing.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+
+
+## Installation
+
+1. Clone the repository or download the zip extract it:
+
+    ```bash
+    git clone https://github.com/vitheshshetty00/roomrez.git
+    ```
+
+
+2. Install the dependencies:
+
+    ```bash
+    npm install
+    ```
+
+## Usage
+
+1. Configure the project:
+
+   - create .env and  add the variables from env.txt 
+
+    - Update the configuration file (`config.js` or similar) with the required settings.
+
+2. Start the application:
+
+    ```bash
+    npm run dev
+    ```
+
+3. Open your web browser and navigate to `http://localhost:3000` to access the application.
+
+### Take look at screent shot of the project in screenshots folder
+
+i have deleted .next and node_modules folder to reduce the size of the project

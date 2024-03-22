@@ -16,7 +16,7 @@ export default function Home() {
     const [endTime, setEndTime] = useState('');
     const [capacity, setCapacity] = useState();
     const [rooms, setRooms] = useState([]);
-    // const [userBookings, setUserBookings] = useState([]);
+    const [userBookings, setUserBookings] = useState([]);
 
     useEffect(() => {
         const fetchRooms = async () => {
@@ -39,21 +39,21 @@ export default function Home() {
         return () => unsubscribe();
       }, []);
 
-    //   useEffect(() => {
-    //     const fetchUserBookings = async () => {
-    //       const q = query(
-    //         collection(db, 'bookings'),
-    //         where('userId', '==', user?.uid)
-    //       );
-    //       const querySnapshot = await getDocs(q);
-    //       const bookings = querySnapshot.docs.map(doc => doc.data());
-    //       setUserBookings(bookings);
-    //     };
+      useEffect(() => {
+        const fetchUserBookings = async () => {
+          const q = query(
+            collection(db, 'bookings'),
+            where('userId', '==', user?.uid)
+          );
+          const querySnapshot = await getDocs(q);
+          const bookings = querySnapshot.docs.map(doc => doc.data());
+          setUserBookings(bookings);
+        };
       
-    //     if (user) {
-    //       fetchUserBookings();
-    //     }
-    //   }, [user]);
+        if (user) {
+          fetchUserBookings();
+        }
+      }, [user]);
 
 
       const handleBooking = async (roomId) => {
@@ -85,7 +85,6 @@ export default function Home() {
       
           await addDoc(bookingsRef, {
             roomId: roomId,
-            roomName:roomName,
             userId: user.uid, // Assuming `user` is the current user
             date: date,
             startTime: startTime,
