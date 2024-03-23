@@ -1,6 +1,4 @@
-# Project Name
-
-# Project Name
+# RoomRez
 
 This project is a room booking system built with Next.js 14 and Firebase. It allows users to view available rooms, book a room for a specific date and time, and view their bookings. The system checks for booking conflicts to prevent double-booking of rooms. Firebase is used for authentication, allowing users to sign in to book rooms and view their bookings, and for storage, storing the room and booking data. The project uses a modern, responsive design to provide a great user experience on both desktop and mobile devices.
 
