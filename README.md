@@ -65,4 +65,3 @@ In the future, we plan to implement a more secure system with user roles, where 
 
 ### Take look at screent shot of the project in screenshots folder
 
-i have deleted .next and node_modules folder to reduce the size of the project
